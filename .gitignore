@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# 虚拟环境
+venv/
+.venv/
+env/
+
+# 任务数据库（本地敏感/可复现）
+taskpilot.db
+
+# 密钥文件（真实 .env 或密钥文件）
+.env
+*.key
+*.pem
+
+# 测试产物
+.pytest_cache/
+.coverage
+htmlcov/
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 日志
+*.log

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskPilot AI</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header>
+    <h1>TaskPilot AI</h1>
+    <p>轻量级 Web Agent 演示 - 输入任务，系统自动读取文件、运行测试并生成报告</p>
+  </header>
+  <main>
+    <section class="card">
+      <h2>提交任务</h2>
+      <form id="task-form">
+        <textarea id="task-input" placeholder="请输入任务描述，例如：读取 demo 目录下的 README，运行 pytest 测试并生成报告" rows="4" required></textarea>
+        <div class="form-actions">
+          <button type="submit" class="primary">运行任务</button>
+        </div>
+      </form>
+    </section>
+    <section class="card" id="task-status">
+      <h2>任务状态</h2>
+      <div id="status-content">等待提交任务...</div>
+    </section>
+    <section class="card" id="task-report">
+      <h2>执行报告</h2>
+      <div id="report-content"></div>
+    </section>
+    <section class="card">
+      <h2>历史记录</h2>
+      <ul id="history-list">
+        <li>暂无历史记录</li>
+      </ul>
+    </section>
+  </main>
+  <div id="toast" class="toast"></div>
+  <script src="/static/app.js"></script>
+</body>
+</html>
